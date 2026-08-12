@@ -1,0 +1,509 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+
+    background: #1f1f1f;
+    color: white;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar h1 {
+    font-size: 26px;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+
+    padding: 8px 14px;
+
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: #333;
+    color: #4caf50;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+
+    padding: 65px 20px 40px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666;
+
+    max-width: 600px;
+    margin: auto;
+}
+
+
+/* =========================
+   TO-DO LIST
+========================= */
+
+.todo-section {
+    width: 90%;
+    max-width: 750px;
+
+    margin: 25px auto 50px;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.todo-section h2 {
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    font-size: 26px;
+}
+
+
+/* Input area */
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+}
+
+.todo-input input {
+    flex: 1;
+
+    padding: 14px;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.todo-input input:focus {
+    border-color: #4caf50;
+
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.12);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    padding: 14px 22px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #4caf50;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #388e3c;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   TASK LIST
+========================= */
+
+#taskList {
+    list-style: none;
+    margin-top: 22px;
+}
+
+#taskList li {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 13px 15px;
+
+    margin-bottom: 10px;
+
+    background: #f7f8f9;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 7px;
+}
+
+#taskList li span {
+    flex: 1;
+    cursor: pointer;
+}
+
+
+/* Completed task */
+
+#taskList li.completed {
+    text-decoration: line-through;
+    color: #888;
+    opacity: 0.7;
+}
+
+
+/* Delete button */
+
+.delete-btn {
+    background: #e53935;
+
+    padding: 8px 14px;
+
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background: #c62828;
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-section {
+    width: 90%;
+    max-width: 650px;
+
+    margin: 0 auto 60px;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contact-section h2 {
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    font-size: 26px;
+}
+
+
+/* Form groups */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+
+/* Inputs */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 7px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4caf50;
+
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.12);
+}
+
+
+/* Message box */
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+
+/* Validation errors */
+
+.form-group small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #e53935;
+
+    font-size: 13px;
+}
+
+
+/* Submit */
+
+#contactForm button[type="submit"] {
+    width: 100%;
+}
+
+
+/* Success message */
+
+#successMessage {
+    margin-top: 15px;
+
+    text-align: center;
+
+    color: #2e7d32;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    background: #1f1f1f;
+
+    color: #ddd;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE - TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .navbar h1 {
+        font-size: 23px;
+    }
+
+    .nav-links {
+        gap: 3px;
+    }
+
+    .nav-links a {
+        padding: 7px 9px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 50px 20px 30px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .todo-section,
+    .contact-section {
+        width: 92%;
+        padding: 28px;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE - MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 5px;
+    }
+
+    .hero {
+        padding: 40px 18px 25px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .todo-section,
+    .contact-section {
+        width: 92%;
+        padding: 22px;
+        margin-bottom: 35px;
+    }
+
+    .todo-section h2,
+    .contact-section h2 {
+        font-size: 23px;
+    }
+
+    .todo-input {
+        flex-direction: column;
+    }
+
+    .todo-input input {
+        width: 100%;
+    }
+
+    .todo-input button {
+        width: 100%;
+    }
+
+    #taskList li {
+        align-items: flex-start;
+    }
+
+    .delete-btn {
+        padding: 7px 10px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .navbar h1 {
+        font-size: 21px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+        padding: 6px 7px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .todo-section,
+    .contact-section {
+        padding: 18px;
+    }
+}

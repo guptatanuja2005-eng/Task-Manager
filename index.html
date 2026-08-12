@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <h1>Task Manager</h1>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2>Manage Your Tasks Easily</h2>
+
+        <p>
+            Add, complete and remove your tasks using JavaScript.
+        </p>
+    </section>
+
+
+    <!-- To-Do List -->
+    <section id="tasks" class="todo-section">
+
+        <h2>My To-Do List</h2>
+
+        <div class="todo-input">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a task"
+            >
+
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+    </section>
+
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-section">
+
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+
+            <div class="form-group">
+                <label for="name">Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
+
+                <small id="nameError"></small>
+            </div>
+
+
+            <div class="form-group">
+                <label for="email">Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                >
+
+                <small id="emailError"></small>
+            </div>
+
+
+            <div class="form-group">
+                <label for="message">Message</label>
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Enter your message"
+                ></textarea>
+
+                <small id="messageError"></small>
+            </div>
+
+
+            <button type="submit">Submit</button>
+
+            <p id="successMessage"></p>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Task Manager</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
